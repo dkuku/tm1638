@@ -1,6 +1,8 @@
 defmodule Tm1638.MixProject do
   use Mix.Project
 
+  @source_url "https://github.com/dkuku/tm_1638"
+
   def project do
     [
       app: :tm1638,
@@ -9,11 +11,22 @@ defmodule Tm1638.MixProject do
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       name: "tm1638",
-      source_url: "https://github.com/dkuku/tm_1638",
+      package: package(),
+      description: description(),
+      source_url: @source_url,
       docs: [
         extras: ["README.md"]
       ]
     ]
+  end
+
+      def package do
+        %{
+      licenses: ["Apache-2.0"],
+      links: %{"GitHub" => @source_url}}
+      end
+  def description do
+    "use tm1638 with nerves"
   end
 
   def application do
