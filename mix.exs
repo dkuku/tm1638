@@ -1,7 +1,7 @@
 defmodule Tm1638.MixProject do
   use Mix.Project
 
-  @source_url "https://github.com/dkuku/tm_1638"
+  @source_url "https://github.com/dkuku/tm1638"
 
   def project do
     [
